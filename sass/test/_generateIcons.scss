@@ -1,0 +1,22 @@
+$icons: 'facebook', 'github', 'linkedin', 'twitter';
+@each $iconName in $icons {
+  .icon-#{$iconName} {
+    background-color: aqua;
+    background-image: url('/images/#{$iconName}.svg');
+  }
+}
+
+$icons: 'facebook', 'github', 'linkedin', 'twitter';
+@mixin generateIcons($iconList) {
+  @each $iconName in $icons {
+    .icon-#{$iconName} {
+      background-color: red;
+      background-image: url('/images/#{$iconName}.svg');
+    }
+  }
+}
+// Вызов миксина: @include generateIcons($icons);
+
+@include generateIcons($icons);
+@include generateIcons($icons);
+@include generateIcons($icons);
